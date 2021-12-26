@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4daf54
+}
+
+body {
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    height: 100vh;
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.card-heart,
+.card-cart {
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.card-cart {
+    left: unset;
+    right: 20px;
+}
+
+.card-img {
+    width: 80%;
+    transition: 0.5s;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0 0 28px;
+}
+
+.card-title,
+.card-price {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 12px;
+    transition: 0.5s;
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.card-size,
+.card-color {
+    display: flex;
+    font-size: 20px;
+}
+
+.card-size p,
+.card-color p {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.card-size span {
+    padding: 4px 8px;
+    background:#ccc;
+    color: #000;
+    border-radius: 5%;
+    margin: 12px 4px;
+    cursor: pointer;
+}
+
+.card-color span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 12px 12px;
+    cursor: pointer;
+}
+
+.card-color-blue {
+    background-color: blue;
+}
+
+.card-color-red {
+    background-color: red;
+}
+
+.card-color-white {
+    background-color: white;
+}
+
+.card-action {
+    margin: 12px 0;
+}
+
+.card-action button {
+    padding: 12px 8px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.card:hover .card-img {
+    transform: rotate(-20deg) translateY(-80px);
+}
+
+.card:hover .card-title {
+    transform: translate(-16px, -36px);
+}
+
+.card:hover .card-price {
+    transform: translate(-120px, -36px);
+}
+
+.card-size,
+.card-color,
+.card-action {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card-size {
+    margin-top: 168px;
+}
+
+.card:hover .card-size,
+.card:hover .card-color,
+.card:hover .card-action {
+    visibility: visible;
+    opacity: 100;
+    margin-top: 0px;
+    transition: 0.5s;
+}
